@@ -1,0 +1,47 @@
+# Specify analysis options.
+#
+# For a list of lints, see: http://dart-lang.github.io/linter/lints/
+# See the configuration guide for more
+# https://github.com/dart-lang/sdk/tree/main/pkg/analyzer#configuring-the-analyzer
+#
+# There are other similar analysis options files in the flutter repos,
+# which should be kept in sync with this file:
+#
+#   - analysis_options.yaml (this file)
+#   - https://github.com/flutter/plugins/blob/master/analysis_options.yaml
+#   - https://github.com/flutter/engine/blob/master/analysis_options.yaml
+#   - https://github.com/flutter/packages/blob/master/analysis_options.yaml
+#
+# This file contains the analysis options used for code in the flutter/flutter
+# repository.
+
+analyzer:
+  language:
+    strict-casts: false
+    strict-raw-types: false
+  errors:
+    # allow self-reference to deprecated members (we do this because otherwise we have
+    # to annotate every member in every test, assert, etc, when we deprecate something)
+    #deprecated_member_use_from_same_package: ignore
+    # unused_local_variable: ignore
+    unused_import: ignore
+    # unnecessary_import: ignore
+    # unused_field: ignore
+    # unnecessary_type_check: ignore
+    dead_code: ignore
+    # body_might_complete_normally_catch_error: ignore
+    # unnecessary_null_comparison: ignore
+    # deprecated_member_use: ignore
+    # unnecessary_non_null_assertion: ignore
+    # invalid_null_aware_operator: ignore
+    # unused_element: ignore
+    
+    
+
+
+
+  exclude:
+    - "bin/cache/**"
+      # Ignore protoc generated files
+    - "dev/conductor/lib/proto/*"
+
